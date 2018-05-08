@@ -1,0 +1,21 @@
+* {
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+}
+
+.container {
+}
+
+.intro {
+	height: 100vh;
+	background: url('../images/trianglify.svg');
+	padding: 0 15px;
+}
+
+.projects {
+	height: 100vh;
+}
