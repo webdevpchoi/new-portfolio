@@ -90,24 +90,42 @@ body {
   100% {
     opacity: 0; } }
 
+@keyframes hoverFade {
+  from {
+    bottom: 0;
+    opacity: 1; }
+
+  to {
+    bottom: 10px;
+    opacity: .3; } }
+
 .intro {
   height: 100vh;
+  min-height: 638px;
   background: url("../images/trianglify.svg");
   font-weight: 100;
   overflow: hidden; }
   .intro .intro-header {
     font-weight: 100;
+    font-size: 1.7em;
     letter-spacing: 2px;
-    margin: 1em 0; }
+    margin: .5em 0;
+    color: #454545;
+    text-align: center; }
     .intro .intro-header .ideas {
-      font-family: 'Permanent Marker', sans-serif; }
+      font-family: 'Permanent Marker', sans-serif;
+      font-size: 2.1em;
+      display: block;
+      letter-spacing: 10px;
+      margin: .3em 0; }
     .intro .intro-header .reality {
-      border-bottom: 7px solid black;
-      height: 100px;
       text-transform: uppercase;
       font-family: 'Kanit', sans-serif;
-      font-size: .8em;
-      font-weight: 300; }
+      font-size: 2em;
+      font-weight: 300;
+      display: block;
+      letter-spacing: 3px;
+      margin: .3em 0; }
   .intro hr {
     border: 0;
     height: 1px;
@@ -119,41 +137,58 @@ body {
     font-weight: 100;
     text-align: center;
     margin-top: 2em; }
-  .intro .keyword {
-    background-color: rgba(105, 109, 125, 0.5);
-    border-radius: 5px;
-    box-shadow: 0 4px 5px 2px #848897;
-    padding: 10px;
-    position: relative;
-    height: 100px;
-    width: auto;
-    max-width: 900px;
+    .intro .intro-p .keyword {
+      background-color: rgba(105, 109, 125, 0.5);
+      border-radius: 5px;
+      box-shadow: 0 4px 5px 2px #848897;
+      padding: 10px;
+      position: relative;
+      height: 100px;
+      width: auto;
+      max-width: 900px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1em;
+      font-family: 'Kanit', sans-serif;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin: 2em auto;
+      color: #DEDEDE; }
+      .intro .intro-p .keyword span {
+        position: absolute;
+        opacity: 0;
+        overflow: hidden;
+        animation: fadedown 11.5s linear infinite 0s; }
+      .intro .intro-p .keyword span:nth-child(2) {
+        animation-delay: 2.5s; }
+      .intro .intro-p .keyword span:nth-child(3) {
+        animation-delay: 5.5s; }
+      .intro .intro-p .keyword span:nth-child(4) {
+        animation-delay: 8.5s; }
+  .intro .down {
+    bottom: 0;
+    font-size: 1.5em;
+    margin: 1em auto;
+    animation: hoverFade 1s infinite alternate;
+    height: 50px;
+    width: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 900;
-    font-size: .8em;
-    margin: .5em 0;
-    font-family: 'Kanit', sans-serif;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    margin: 1em auto;
-    color: #DEDEDE; }
-    .intro .keyword span {
-      position: absolute;
-      opacity: 0;
-      overflow: hidden;
-      animation: fadedown 11.5s linear infinite 0s; }
-    .intro .keyword span:nth-child(2) {
-      animation-delay: 2.5s; }
-    .intro .keyword span:nth-child(3) {
-      animation-delay: 5.5s; }
-    .intro .keyword span:nth-child(4) {
-      animation-delay: 8.5s; }
+    border-radius: 50%;
+    background: none;
+    border: none; }
+  .intro .down:active {
+    background-color: red;
+    color: white; }
+  .intro .down:focus {
+    outline: none; }
 
 .projects {
   height: 100vh;
-  background-color: blue; }
+  background-color: #f2f6fc; }
   .projects .proj-carousel {
     list-style-type: none; }
 
