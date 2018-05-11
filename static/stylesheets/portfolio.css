@@ -60,9 +60,10 @@
 html {
   font-family: 'Work Sans', sans-serif; }
 
-body {
+html, body {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  min-width: 320px; }
 
 @keyframes fadedown {
   0% {
@@ -100,7 +101,8 @@ body {
     opacity: .3; } }
 
 .intro {
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   min-height: 638px;
   background: url("../images/trianglify.svg");
   font-weight: 100;
@@ -128,7 +130,7 @@ body {
       margin: .3em 0; }
   .intro hr {
     border: 0;
-    height: 1px;
+    height: .5px;
     background: #333;
     background-image: linear-gradient(to right, #cccccc, #333333, #cccccc);
     z-index: 1;
@@ -187,11 +189,13 @@ body {
     outline: none; }
 
 .projects {
-  height: 100vh;
+  height: 100%;
   background-color: #f2f6fc; }
+  .projects .navbar ul {
+    list-style-type: none; }
   .projects .proj-carousel {
     list-style-type: none; }
 
 .contact {
-  height: 100vh;
+  height: 100%;
   background-color: red; }
