@@ -57,13 +57,11 @@
 * {
   -webkit-overflow-scrolling: touch; }
 
-html {
-  font-family: 'Work Sans', sans-serif; }
-
 html, body {
+  font-family: 'Work Sans', sans-serif;
   height: 100%;
   width: 100%;
-  min-width: 320px; }
+  min-width: 300px; }
 
 @keyframes fadedown {
   0% {
@@ -101,7 +99,6 @@ html, body {
     opacity: .3; } }
 
 .intro {
-  height: 100%;
   width: 100%;
   min-height: 638px;
   background: url("../images/trianglify.svg");
@@ -189,13 +186,51 @@ html, body {
     outline: none; }
 
 .projects {
-  height: 100%;
-  background-color: #f2f6fc; }
-  .projects .navbar ul {
-    list-style-type: none; }
+  background-color: #f2f6fc;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  .projects .proj-title {
+    text-align: center;
+    margin-bottom: .5em; }
   .projects .proj-carousel {
-    list-style-type: none; }
+    padding: 0; }
+    .projects .proj-carousel .skills-used {
+      margin: 1rem 0; }
+    .projects .proj-carousel .view-code {
+      text-align: center; }
 
 .contact {
-  height: 100%;
-  background-color: red; }
+  background-color: #696D7D;
+  overflow: hidden; }
+  .contact .contact-intro {
+    color: #f2f2f2; }
+    .contact .contact-intro h1 {
+      font-weight: 400;
+      letter-spacing: 2px; }
+    .contact .contact-intro .available {
+      box-shadow: 0 0 3px 1px #41444F, 0 0 3px 1px #41444F, 0 0 3px 1px #41444F;
+      border: 2px solid #edda08;
+      color: #edda08;
+      text-transform: uppercase; }
+  .contact .email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; }
+    .contact .email-form .label-name, .contact .email-form .label-email {
+      position: relative;
+      width: 100%; }
+      .contact .email-form .label-name span, .contact .email-form .label-email span {
+        position: absolute;
+        left: 7px;
+        top: 2px;
+        color: #696d7d; }
+      .contact .email-form .label-name .email-input, .contact .email-form .label-name .name-input, .contact .email-form .label-email .email-input, .contact .email-form .label-email .name-input {
+        text-indent: 30px;
+        width: 100%; }
+    .contact .email-form .label-message {
+      width: 100%;
+      height: 30%; }
+      .contact .email-form .label-message .message-input {
+        width: 100%;
+        height: 100%; }

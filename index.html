@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="./static/dependencies/slick/slick-theme.css">
 </head>
 <body>
+	<!-- INTRODUCTION -->
 	<header class="intro container">
 			<h1 class='intro-header'>
 				Let's transition your <em class="ideas">ideas</em> into <strong class="reality">reality</strong>
@@ -30,78 +31,163 @@
 				<i class="fas fa-long-arrow-alt-down"></i>
  			</button>
 	</header>
-	<section class="projects container">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+	<!--NAVBAR-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <a class="navbar-brand" href="#">Navbar</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-		<h1>Projects</h1>
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Link</a>
+	      </li>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          Dropdown
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="#">Action</a>
+	          <a class="dropdown-item" href="#">Another action</a>
+	          <div class="dropdown-divider"></div>
+	          <a class="dropdown-item" href="#">Something else here</a>
+	        </div>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link disabled" href="#">Disabled</a>
+	      </li>
+	    </ul>
+	    <form class="form-inline my-2 my-lg-0">
+	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	    </form>
+	  </div>
+	</nav>
+	<!-- PROJECTS -->
+	<section class="projects container">
+		<h1 class="proj-title">Projects</h1>
 		<ul class="proj-carousel">
 			<li class="each-proj">
-				<img src="http://via.placeholder.com/200x200" alt="" class="thumbnail">
+				<div class="card">
+					<img class="card-img-top" src="https://picsum.photos/328/200/?random" alt="RGB Game Thumbnail">
+					<div class="card-body">
+					    <h5 class="card-title text-center">RGB</h5>
+					    <h6 class="card-subtitle text-muted mb-3">Description</h6>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    <h6 class="card-subtitle text-muted">Skills Used</h6>
+					    <div class="skills-used">
+					    	<i class="fab fa-html5 fa-3x"></i>
+					    	<i class="fab fa-css3-alt fa-3x"></i>
+					    	<i class="fab fa-js-square fa-3x"></i>
+					    </div>
+					    <div class="view-code">
+						    <a href="#" class="btn btn-primary">View Code</a>
+					    </div>
+				  </div>
+				</div>		
 			</li>
 			<li class="each-proj">
-				<img src="http://via.placeholder.com/200x200" alt="" class="thumbnail">
+				<div class="card">
+					<img class="card-img-top" src="https://picsum.photos/328/200/?random" alt="Card image cap">
+					<div class="card-body">
+					    <h5 class="card-title text-center">Card title</h5>
+					    <h6 class="card-subtitle text-muted mb-3">Description</h6>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    <h6 class="card-subtitle text-muted">Skills Used</h6>
+					    <div class="skills-used">
+					    	<i class="fab fa-html5 fa-3x"></i>
+					    	<i class="fab fa-css3-alt fa-3x"></i>
+					    	<i class="fab fa-js-square fa-3x"></i>
+					    </div>
+					    <div class="view-code">
+						    <a href="#" class="btn btn-primary">View Code</a>
+					    </div>
+				  </div>
+				</div>
 			</li>
 			<li class="each-proj">
-				<img src="http://via.placeholder.com/200x200" alt="" class="thumbnail">
+				<div class="card">
+					<img class="card-img-top" src="https://picsum.photos/328/200/?random" alt="Card image cap">
+					<div class="card-body">
+					    <h5 class="card-title text-center">Card title</h5>
+					    <h6 class="card-subtitle text-muted mb-3">Description</h6>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    <h6 class="card-subtitle text-muted">Skills Used</h6>
+					    <div class="skills-used">
+					    	<i class="fab fa-html5 fa-3x"></i>
+					    	<i class="fab fa-css3-alt fa-3x"></i>
+					    	<i class="fab fa-js-square fa-3x"></i>
+					    </div>
+					    <div class="view-code">
+						    <a href="#" class="btn btn-primary">View Code</a>
+					    </div>
+				  </div>
+				</div>
 			</li>
 			<li class="each-proj">
-				<img src="http://via.placeholder.com/200x200" alt="" class="thumbnail">
+				<div class="card">
+					<img class="card-img-top" src="https://picsum.photos/328/200/?random" alt="Card image cap">
+					<div class="card-body">
+					    <h5 class="card-title text-center">Card title</h5>
+					    <h6 class="card-subtitle text-muted mb-3">Description</h6>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    <h6 class="card-subtitle text-muted">Skills Used</h6>
+					    <div class="skills-used">
+					    	<i class="fab fa-html5 fa-3x"></i>
+					    	<i class="fab fa-css3-alt fa-3x"></i>
+					    	<i class="fab fa-js-square fa-3x"></i>
+					    </div>
+					    <div class="view-code">
+						    <a href="#" class="btn btn-primary">View Code</a>
+					    </div>
+				  </div>
+				</div>
 			</li>
 			<li class="each-proj">
-				<img src="http://via.placeholder.com/200x200" alt="" class="thumbnail">
+				<div class="card">
+					<img class="card-img-top" src="https://picsum.photos/328/200/?random" alt="Card image cap">
+					<div class="card-body">
+					    <h5 class="card-title text-center">Card title</h5>
+					    <h6 class="card-subtitle text-muted mb-3">Description</h6>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    <h6 class="card-subtitle text-muted">Skills Used</h6>
+					    <div class="skills-used">
+					    	<i class="fab fa-html5 fa-3x"></i>
+					    	<i class="fab fa-css3-alt fa-3x"></i>
+					    	<i class="fab fa-js-square fa-3x"></i>
+					    </div>
+					    <div class="view-code">
+						    <a href="#" class="btn btn-primary">View Code</a>
+					    </div>
+				  </div>
+				</div>
 			</li>
 		</ul>
 	</section>
+	<!-- CONTACT ME -->
 	<section class="contact container">
-		<form class="email-form">
-			<h1>Let's Talk!</h1>
-			<div class="available">
-				Available for Hire
+		<section class="contact-intro">
+			<h1 class="text-center my-4">Let's Talk!</h1>
+			<div class="available-container text-center">
+				<div class="available btn">Available</div>
 			</div>
-			<p class="contact-desc">If you're interested in hiring me for a permanent/freelance position, working together on a project together, or just have any questions regarding my portfolio or projects, please feel free to shoot me an email below! </p>
-			<label class="name-input" for="name">
+			<p class="contact-desc my-4">If you're interested in hiring me for a permanent/freelance position, working together on a project together, or just have any questions regarding my portfolio or projects, please feel free to shoot me an email below! </p>
+		</section>
+		<form class="email-form form-group">
+			<label class="label-name" for="name">
 				<span><i class="fas fa-user-circle fa-2x"></i></span>
-				<input type="text" id="name" placeholder="Name">
+				<input class="name-input form-control" type="text" id="name" placeholder="Name">
 			</label>
-			<label class="email-input" for="email">
+			<label class="label-name" for="email">
 				<span><i class="fas fa-envelope-square fa-2x"></i></span>
-				<input type="email" id='email' placeholder="Email">
+				<input class="email-input form-control" type="email" id='email' placeholder="Email">
 			</label>
-			<label class="message-input" for="message">
-				<textarea name="message" id="message" placeholder="Type Message Here" cols="30" rows="10"></textarea>
+			<label class="label-message" for="message">
+				<textarea class="message-input form-control" name="message" id="message" placeholder="Type Message Here" cols="30" rows="10"></textarea>
 			</label>
 			<button>Submit</button>
 		</form>
