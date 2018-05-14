@@ -71,6 +71,7 @@ html, body {
 	height: 100%;
 	width: 100%;
 	min-width: 300px;
+	position: relative;
 }
 
 //animations for rotating words
@@ -98,6 +99,7 @@ html, body {
 
 //intro section
 .intro {
+	height: 100vh;
 	width: 100%;
 	min-height: 638px;
 	background: url('../images/trianglify.svg');
@@ -214,12 +216,15 @@ html, body {
 
 //navbar
 .navbar {
-
+	background-color: #FFD59D;
+	
+	.navbar-brand {
+	}
 }
 
 //project section
 .projects {
-	background-color: #f2f6fc;
+	background-color: #FFF7EC;
 	padding-top: 15px;
 	padding-bottom: 15px;
 
@@ -241,8 +246,93 @@ html, body {
 	}
 }
 
+//Animations for modal
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+//view all skills section
+.view-skills {
+	background-color: #FFD59D;
+	.skills-modal {
+		display: none; /* Hidden by default */
+	    position: fixed; /* Stay in place */
+	    z-index: 1; /* Sit on top */
+	    left: 0;
+	    top: 0;
+	    width: 100%; /* Full width */
+	    height: 100%; /* Full height */
+	    overflow: auto; /* Enable scroll if needed */
+	    background-color: rgb(0,0,0); /* Fallback color */
+	    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	    animation-name: fadeIn;
+	    animation-duration: 0.4s;
+
+		.modal-content {
+			position: fixed;
+		    bottom: 0;
+		    background-color: #fefefe;
+		    width: 100%;
+		    animation-name: slideIn;
+		    animation-duration: 0.4s;
+		    border: none;
+		    border-radius: 0;
+		    max-height: 406px;
+		    overflow: auto;
+
+		    .skills-container {
+		    	display: grid;
+		    	grid-template-columns: repeat(3, 1fr);
+		    	min-width: 254px;
+
+		    	.each-icon {
+		    		font-size: 3em;
+		    		text-align: center;
+
+		    		.skill-label {
+						font-size: 1rem;
+		    		}
+		    	}
+		    }
+
+		    .btn-danger {
+		    	width: 100%;
+		    	border-radius: 0;
+		    }
+		}
+	}
+}
+
+//contact variables
 $available-color: #EDDA08;
 $contact-color: #696D7D;
+
+//animation for external links
+@keyframes spin {
+	from{
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
 //contact section
 .contact {
 	background-color: #696D7D;
@@ -298,5 +388,68 @@ $contact-color: #696D7D;
 			}
 		}
 
+		.submit-email {
+			margin: 1em;
+		}
+	}
+}
+
+.contact-footer {
+	background-color: #41434D;
+	width: 100%;
+	height: auto;
+	min-height: 72px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+		
+	.up {
+		font-size: 2em;
+		position: absolute;
+		top: -15px;
+		margin: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.fa-circle {
+			color: $contact-color;
+		}
+	}
+
+	.external-links {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+		.links-container {
+			height: 80%;
+			width: auto;
+			color: #000000;
+
+			svg {
+				font-size: 3em;
+			}
+		}
+
+		.links-container:hover {
+			animation: 1s spin;
+		}
+
+		.linked-in:hover {
+			color: #0077b5;
+		}
+
+		.github:hover {
+			color: #fff;
+		}
+		.codepen:hover {
+			color: #0ebeff;
+		}
+		.instagram:hover {
+			color: #c13584;
+		}
 	}
 }

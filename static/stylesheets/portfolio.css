@@ -61,7 +61,8 @@ html, body {
   font-family: 'Work Sans', sans-serif;
   height: 100%;
   width: 100%;
-  min-width: 300px; }
+  min-width: 300px;
+  position: relative; }
 
 @keyframes fadedown {
   0% {
@@ -99,6 +100,7 @@ html, body {
     opacity: .3; } }
 
 .intro {
+  height: 100vh;
   width: 100%;
   min-height: 638px;
   background: url("../images/trianglify.svg");
@@ -185,8 +187,11 @@ html, body {
   .intro .down:focus {
     outline: none; }
 
+.navbar {
+  background-color: #FFD59D; }
+
 .projects {
-  background-color: #f2f6fc;
+  background-color: #FFF7EC;
   padding-top: 15px;
   padding-bottom: 15px; }
   .projects .proj-title {
@@ -198,6 +203,93 @@ html, body {
       margin: 1rem 0; }
     .projects .proj-carousel .view-code {
       text-align: center; }
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {
+    bottom: -300px;
+    opacity: 0; }
+
+  to {
+    bottom: 0;
+    opacity: 1; } }
+
+@keyframes slideIn {
+  from {
+    bottom: -300px;
+    opacity: 0; }
+
+  to {
+    bottom: 0;
+    opacity: 1; } }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+.view-skills {
+  background-color: #FFD59D; }
+  .view-skills .skills-modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: black;
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    animation-name: fadeIn;
+    animation-duration: 0.4s; }
+    .view-skills .skills-modal .modal-content {
+      position: fixed;
+      bottom: 0;
+      background-color: #fefefe;
+      width: 100%;
+      animation-name: slideIn;
+      animation-duration: 0.4s;
+      border: none;
+      border-radius: 0;
+      max-height: 406px;
+      overflow: auto; }
+      .view-skills .skills-modal .modal-content .skills-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        min-width: 254px; }
+        .view-skills .skills-modal .modal-content .skills-container .each-icon {
+          font-size: 3em;
+          text-align: center; }
+          .view-skills .skills-modal .modal-content .skills-container .each-icon .skill-label {
+            font-size: 1rem; }
+      .view-skills .skills-modal .modal-content .btn-danger {
+        width: 100%;
+        border-radius: 0; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+
+  to {
+    transform: rotate(360deg); } }
 
 .contact {
   background-color: #696D7D;
@@ -234,3 +326,46 @@ html, body {
       .contact .email-form .label-message .message-input {
         width: 100%;
         height: 100%; }
+    .contact .email-form .submit-email {
+      margin: 1em; }
+
+.contact-footer {
+  background-color: #41434D;
+  width: 100%;
+  height: auto;
+  min-height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .contact-footer .up {
+    font-size: 2em;
+    position: absolute;
+    top: -15px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .contact-footer .up .fa-circle {
+      color: #696d7d; }
+  .contact-footer .external-links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+    .contact-footer .external-links .links-container {
+      height: 80%;
+      width: auto;
+      color: #000000; }
+      .contact-footer .external-links .links-container svg {
+        font-size: 3em; }
+    .contact-footer .external-links .links-container:hover {
+      animation: 1s spin; }
+    .contact-footer .external-links .linked-in:hover {
+      color: #0077b5; }
+    .contact-footer .external-links .github:hover {
+      color: #fff; }
+    .contact-footer .external-links .codepen:hover {
+      color: #0ebeff; }
+    .contact-footer .external-links .instagram:hover {
+      color: #c13584; }
