@@ -102,7 +102,8 @@ html, body {
 	height: 100vh;
 	width: 100%;
 	min-height: 676px;
-	background: url('../images/trianglify.svg');
+	background: url('../images/trianglify.svg') no-repeat;
+	background-size: cover;
 	font-weight: 100;
 	overflow: hidden;
 
@@ -135,7 +136,7 @@ html, body {
 
 	hr {
 	 	border: 0;
-	    height: .5px;
+	    height: 1px;
 	    background: #333;
 	    background-image: linear-gradient(to right, #ccc, #333, #ccc);
 	    z-index: 1;
@@ -155,7 +156,7 @@ html, body {
 			position: relative;
 			height: 100px;
 			width: auto;
-			max-width: 900px;
+			max-width: 493px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -216,9 +217,10 @@ html, body {
 //navbar
 .navbar {
 	background-color: #FFD59D;
-	
-	.navbar-brand {
-	}
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 }
 
 //project section
@@ -226,14 +228,27 @@ html, body {
 	background-color: #FFF7EC;
 	padding-top: 15px;
 	padding-bottom: 15px;
+	height: 100vh;
+	min-height: 830px;
+	position: relative;
 
 	.proj-title {
 		text-align: center;
-		margin-bottom: .5em;
+		margin-bottom: 2em;
 	}
 
 	.proj-carousel {
 		padding: 0;
+
+		.each-proj {
+			opacity: .8;
+			transform: scale(.95);
+		}
+
+		.slick-center {
+		    	opacity: 1;
+			    transform: scale(1);
+		}
 
 		.skills-used {
 			margin: 1rem 0;
@@ -270,6 +285,11 @@ html, body {
 //view all skills section
 .view-skills {
 	background-color: #FFD59D;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+
 	.skills-modal {
 		display: none; /* Hidden by default */
 	    position: fixed; /* Stay in place */
@@ -277,7 +297,7 @@ html, body {
 	    left: 0;
 	    top: 0;
 	    width: 100%; /* Full width */
-	    height: 100%; /* Full height */
+	    height: 100vh; /* Full height */
 	    overflow: auto; /* Enable scroll if needed */
 	    background-color: rgb(0,0,0); /* Fallback color */
 	    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
@@ -294,7 +314,8 @@ html, body {
 		    border: none;
 		    border-radius: 0;
 		    max-height: 406px;
-		    overflow: auto;
+	    	overflow-y: scroll;
+	
 
 		    .skills-container {
 		    	display: grid;
@@ -359,6 +380,11 @@ $contact-color: #696D7D;
 			color: $available-color;
 			text-transform: uppercase;
 		}
+
+		.contact-desc {
+			max-width: 484px;
+			margin: 0 auto;
+		}
 	}
 
 	.email-form {
@@ -366,6 +392,10 @@ $contact-color: #696D7D;
 		flex-direction: column;
 		align-items: center;
 		position: relative;
+
+		.label-name, .label-email, .label-message {
+			max-width: 484px;
+		}
 
 		.label-name, .label-email {
 			position: relative;
@@ -430,6 +460,7 @@ $contact-color: #696D7D;
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
+		max-width: 509px;
 
 		.links-container {
 			height: 80%;
@@ -457,6 +488,25 @@ $contact-color: #696D7D;
 		}
 		.instagram:hover {
 			color: #c13584;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	//intro
+	.intro {
+		.intro-header {
+			line-height: 3em;
+			margin-top: 2em;
+
+			.ideas, .reality {
+				display: inline;
+				margin: 0 .2em;
+			}
+		}
+
+		hr {
+			margin-top: 3em;
 		}
 	}
 }

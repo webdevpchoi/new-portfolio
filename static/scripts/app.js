@@ -6,9 +6,28 @@ $(document).ready(function() {
 	const closeModal = $('.close-modal');
 	//slick.js settings initialized
 	carousel.slick({
-		centerPadding: '0px',
+		centerPadding: '60px',
 		centerMode: true,
+		slidesToShow: 3,
 		dots: true,
+		rows: 0,
+		responsive: [{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 1,
+				centerPadding: '120px',
+			}
+		},
+		{
+			breakpoint: 600,
+			settings: {
+				centerPadding: '0px',
+				slidesToShow: 1,
+			}
+		},
+		{
+
+		}]
 	})
 
 	//toggle view of skills modal

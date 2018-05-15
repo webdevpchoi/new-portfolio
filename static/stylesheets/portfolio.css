@@ -103,7 +103,8 @@ html, body {
   height: 100vh;
   width: 100%;
   min-height: 676px;
-  background: url("../images/trianglify.svg");
+  background: url("../images/trianglify.svg") no-repeat;
+  background-size: cover;
   font-weight: 100;
   overflow: hidden; }
   .intro .intro-header {
@@ -129,7 +130,7 @@ html, body {
       margin: .3em 0; }
   .intro hr {
     border: 0;
-    height: .5px;
+    height: 1px;
     background: #333;
     background-image: linear-gradient(to right, #cccccc, #333333, #cccccc);
     z-index: 1;
@@ -146,7 +147,7 @@ html, body {
       position: relative;
       height: 100px;
       width: auto;
-      max-width: 900px;
+      max-width: 493px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -188,17 +189,30 @@ html, body {
     outline: none; }
 
 .navbar {
-  background-color: #FFD59D; }
+  background-color: #FFD59D;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
 
 .projects {
   background-color: #FFF7EC;
   padding-top: 15px;
-  padding-bottom: 15px; }
+  padding-bottom: 15px;
+  height: 100vh;
+  min-height: 830px;
+  position: relative; }
   .projects .proj-title {
     text-align: center;
-    margin-bottom: .5em; }
+    margin-bottom: 2em; }
   .projects .proj-carousel {
     padding: 0; }
+    .projects .proj-carousel .each-proj {
+      opacity: .8;
+      transform: scale(0.95); }
+    .projects .proj-carousel .slick-center {
+      opacity: 1;
+      transform: scale(1); }
     .projects .proj-carousel .skills-used {
       margin: 1rem 0; }
     .projects .proj-carousel .view-code {
@@ -238,7 +252,11 @@ html, body {
     opacity: 1; } }
 
 .view-skills {
-  background-color: #FFD59D; }
+  background-color: #FFD59D;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
   .view-skills .skills-modal {
     display: none;
     /* Hidden by default */
@@ -250,7 +268,7 @@ html, body {
     top: 0;
     width: 100%;
     /* Full width */
-    height: 100%;
+    height: 100vh;
     /* Full height */
     overflow: auto;
     /* Enable scroll if needed */
@@ -270,7 +288,7 @@ html, body {
       border: none;
       border-radius: 0;
       max-height: 406px;
-      overflow: auto; }
+      overflow-y: scroll; }
       .view-skills .skills-modal .modal-content .skills-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -310,11 +328,16 @@ html, body {
       border: 2px solid #edda08;
       color: #edda08;
       text-transform: uppercase; }
+    .contact .contact-intro .contact-desc {
+      max-width: 484px;
+      margin: 0 auto; }
   .contact .email-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative; }
+    .contact .email-form .label-name, .contact .email-form .label-email, .contact .email-form .label-message {
+      max-width: 484px; }
     .contact .email-form .label-name, .contact .email-form .label-email {
       position: relative;
       width: 100%; }
@@ -358,7 +381,8 @@ html, body {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around; }
+    justify-content: space-around;
+    max-width: 509px; }
     .contact-footer .external-links .links-container {
       height: 80%;
       width: auto;
@@ -375,3 +399,13 @@ html, body {
       color: #0ebeff; }
     .contact-footer .external-links .instagram:hover {
       color: #c13584; }
+
+@media (min-width: 768px) {
+  .intro .intro-header {
+    line-height: 3em;
+    margin-top: 2em; }
+    .intro .intro-header .ideas, .intro .intro-header .reality {
+      display: inline;
+      margin: 0 .2em; }
+  .intro hr {
+    margin-top: 3em; } }
