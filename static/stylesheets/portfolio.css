@@ -102,7 +102,7 @@ html, body {
 .intro {
   height: 100vh;
   width: 100%;
-  min-height: 638px;
+  min-height: 676px;
   background: url("../images/trianglify.svg");
   font-weight: 100;
   overflow: hidden; }
@@ -275,14 +275,20 @@ html, body {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         min-width: 254px; }
+        .view-skills .skills-modal .modal-content .skills-container h6 {
+          grid-column-start: 1;
+          grid-column-end: 4; }
         .view-skills .skills-modal .modal-content .skills-container .each-icon {
           font-size: 3em;
           text-align: center; }
           .view-skills .skills-modal .modal-content .skills-container .each-icon .skill-label {
             font-size: 1rem; }
       .view-skills .skills-modal .modal-content .btn-danger {
+        position: fixed;
+        bottom: 0;
         width: 100%;
-        border-radius: 0; }
+        border-radius: 0;
+        min-height: 50px; }
 
 @keyframes spin {
   from {
