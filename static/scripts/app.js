@@ -3,7 +3,9 @@ $(document).ready(function() {
 	const carousel = $('.proj-carousel');
 	const showSkills = $('.show-skills');
 	const modalContent = $('.skills-modal');
+	const navBar = $('.navbar');
 	const closeModal = $('.close-modal');
+
 	//slick.js settings initialized
 	carousel.slick({
 		centerPadding: '60px',
@@ -11,18 +13,67 @@ $(document).ready(function() {
 		slidesToShow: 3,
 		dots: true,
 		rows: 0,
+		prevArrow: "<div class='prev-proj'><i class='fas fa-arrow-alt-circle-left prev-proj'></i></div>",
+		nextArrow: "<div class='next-proj'><i class='fas fa-arrow-alt-circle-right next-proj'></i></div>",
 		responsive: [{
+			breakpoint: 1920,
+			settings: {
+				slidesToShow: 3,
+				centerPadding: '20px',
+			}
+		},
+		{
+			breakpoint: 1664,
+			settings: {
+				slidesToShow: 1,
+				centerPadding: '300px',
+			}
+		},
+		{
+			breakpoint: 1283,
+			settings: {
+				slidesToShow: 1,
+				centerPadding: '200px',
+			}
+		},
+		{
 			breakpoint: 1024,
 			settings: {
 				slidesToShow: 1,
-				centerPadding: '120px',
+				arrows: false,
+				centerPadding: '150px',
+			}
+		}, 
+		{
+			breakpoint: 950,
+			settings: {
+				slidesToShow: 1,
+				centerPadding: '100px',
+				arrows: false,
+			}
+		}, 
+		{
+			breakpoint: 769,
+			settings: {
+				centerPadding: '60px',
+				slidesToShow: 1,
+				arrows: false,
 			}
 		},
 		{
 			breakpoint: 600,
 			settings: {
-				centerPadding: '0px',
+				centerPadding: '30px',
 				slidesToShow: 1,
+				arrows: false,
+			}
+		},
+		{
+			breakpoint: 426,
+			settings: {
+				centerPadding: '15px',
+				slidesToShow: 1,
+				arrows: false,
 			}
 		},
 		{
@@ -43,6 +94,14 @@ $(document).ready(function() {
 	// When the user clicks on close in modal, close the modal
 	closeModal.on('click', function() {
 		modalContent[0].style.display = 'none';
+	})
+	//checks to see the navbar position, and sticks it to the top if scrolling past it
+	$(window).on('wheel', function() {
+		const offsetHeight = navBar.offset().top;
+		const scrollPosition = $(window).scrollTop();
+		console.log(`Distance from the top: ${offsetHeight}`);
+		console.log(`Current scroll position: ${scrollPosition}`);
+
 	})
 
 })
