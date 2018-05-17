@@ -5,6 +5,7 @@ $(document).ready(function() {
 	const modalContent = $('.skills-modal');
 	const navBar = $('.navbar');
 	const closeModal = $('.close-modal');
+	const offsetHeight = navBar.offset().top;
 
 	//slick.js settings initialized
 	carousel.slick({
@@ -95,13 +96,15 @@ $(document).ready(function() {
 	closeModal.on('click', function() {
 		modalContent[0].style.display = 'none';
 	})
-	//checks to see the navbar position, and sticks it to the top if scrolling past it
-	$(window).on('wheel', function() {
-		const offsetHeight = navBar.offset().top;
-		const scrollPosition = $(window).scrollTop();
-		console.log(`Distance from the top: ${offsetHeight}`);
-		console.log(`Current scroll position: ${scrollPosition}`);
 
+	//checks to see the navbar position, and sticks it to the top if scrolling past it
+	$(window).scroll(function() {
+		const scrollPosition = $(window).scrollTop();
+		if(scrollPosition >= offsetHeight) {	
+			navBar.addClass('sticky');
+		} else {
+			navBar.removeClass('sticky');
+		}
 	})
 
 })
