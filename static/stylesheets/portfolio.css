@@ -119,7 +119,8 @@ html, body {
       font-size: 2.1em;
       display: block;
       letter-spacing: 10px;
-      margin: .3em 0; }
+      margin: .3em 0;
+      color: #F9FCFF; }
     .intro .intro-header .reality {
       text-transform: uppercase;
       font-family: 'Kanit', sans-serif;
@@ -182,8 +183,10 @@ html, body {
     border-radius: 50%;
     background: none;
     border: none; }
+    .intro .down a {
+      color: #EAF5FD; }
   .intro .down:active {
-    background-color: red;
+    background-color: #696d7d;
     color: white; }
   .intro .down:focus {
     outline: none; }
@@ -193,6 +196,9 @@ html, body {
   top: 0;
   width: 100%;
   z-index: 1; }
+
+.sticky + .projects {
+  padding-top: 120px; }
 
 .navbar {
   background-color: #FFD59D;
