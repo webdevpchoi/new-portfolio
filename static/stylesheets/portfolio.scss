@@ -121,6 +121,7 @@ html, body {
 			display: block;
 			letter-spacing: 10px;
 			margin: .3em 0;
+			color: #F9FCFF;
 		}
 
 		.reality {
@@ -202,10 +203,16 @@ html, body {
 		border-radius: 50%;
 		background: none;
 		border: none;
+
+		a {
+			color: #EAF5FD;
+
+		}
+
 	}
 
 	.down:active {
-		background-color: red;
+		background-color: rgb(105, 109, 125);
 		color: white;
 	}
 
@@ -213,6 +220,7 @@ html, body {
 		outline: none;
 	}
 }
+
 //sticky class to keep navbar at the top
 .sticky {
   position: fixed;
@@ -220,6 +228,12 @@ html, body {
   width: 100%;
   z-index: 1;
 }
+
+//prevents sudden movement when navbar changes positions
+.sticky + .projects {
+	padding-top: 120px;
+}
+
 //navbar
 .navbar {
 	background-color: #FFD59D;

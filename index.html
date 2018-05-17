@@ -28,13 +28,19 @@
 						<span>Minimalistic Design</span>
 					</div>
 				</h4>
-				<button class="down">
-					<i class="fas fa-long-arrow-alt-down"></i>
-	 			</button>
+				<a href="#navbar">
+					<button class="down">
+						<i class="fas fa-long-arrow-alt-down"></i>
+		 			</button>
+				</a>
 		</div>
 	</header>
 	<!--NAVBAR-->
+<<<<<<< HEAD
 	<nav class="navbar navbar-expand-lg navbar-light">
+=======
+	<nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+>>>>>>> add-smooth-scrolling
 	  <a class="navbar-brand" href="#">Phillip Choi</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
@@ -51,13 +57,13 @@
 	        <a class="nav-link" href="#">About Me</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">Contact</a>
+	        <a class="nav-link" href="#contact">Contact</a>
 	      </li>
 	    </ul>
 	  </div>
 	</nav>
 	<!-- PROJECTS -->
-	<section class="projects container-fluid d-flex flex-column justify-content-center">		
+	<section class="projects container-fluid d-flex flex-column justify-content-center" id="projects">		
 		<h1 class="proj-title">Projects</h1>
 		<ul class="proj-carousel">
 			<li class="each-proj">
@@ -199,8 +205,11 @@
 			</div>
 		</footer>
 	</section>
+	<section class="container-fluid about-me">
+		
+	</section>
 	<!-- CONTACT ME -->
-	<section class="contact container-fluid d-flex justify-content-center align-items-start">
+	<section class="contact container-fluid d-flex justify-content-center align-items-start" id="contact">
 		<div class="contact-contents">
 			<header class="contact-intro">
 				<h1 class="text-center my-4">Let's Talk!</h1>
@@ -226,14 +235,15 @@
 			<!-- CONTACT FOOTER -->
 			<footer class="contact-footer">
 				<div class="up">
-					<span class="fa-layers fa-fw">
-						<i class="fas fa-circle"></i>
-						<i class="fas fa-chevron-circle-up fa-inverse"></i>
-					</span>
+					<a href="#">
+						<span class="fa-layers fa-fw">
+							<i class="fas fa-circle"></i>
+							<i class="fas fa-chevron-circle-up fa-inverse"></i>
+						</span>
+					</a>
 				</div>
 				<div class="external-links">
-					<a target="_blank" href="https://www.linkedin.com/in/webdevphil
-" class="links-container linked-in">
+					<a target="_blank" href="https://www.linkedin.com/in/webdevphil" class="links-container linked-in">
 						<i class="fab fa-linkedin"></i>
 					</a>
 					<a target="_blank" href="https://github.com/webdevpchoi" class="links-container github">
@@ -255,5 +265,6 @@
 	<script src="./static/scripts/app.js"></script>
 	<script src="./static/lib/bootstrap-4.0.0-dist/js/bootstrap.js"></script>
 	<script src="./static/scripts/fontawesome-all.js"></script>
+	<script src="./static/dependencies/smooth-scroll.js"></script>
 </body>
 </html>

@@ -107,4 +107,8 @@ $(document).ready(function() {
 		}
 	})
 
+	//initialize smoothscroll
+	var scroll = new SmoothScroll('a[href*="#"]');
+
+
 })
