@@ -245,7 +245,7 @@ html, body {
 	padding-top: 15px;
 	padding-bottom: 15px;
 	height: 100vh;
-	min-height: 987px;
+	min-height: 1100px;
 	position: relative;
 	overflow: hidden;
 
@@ -290,6 +290,45 @@ html, body {
 		.view-code {
 			text-align: center;
 		}
+	}
+}
+
+//about me section 
+.about-me {
+	.me {
+		background-color: #64A492;
+
+		.portrait-container {
+			width: 60%;
+			height: 60%;
+			margin: 1em auto;
+
+			img {
+				height: 100%;
+				width: 100%;
+				border-radius: 50%;
+			}
+		}
+	}
+
+	.hobbies {
+		background-color: #8872A7;
+
+		.hobby-img {
+			width: 80%;
+			height: 80%;
+			margin: 1em auto;
+
+			img {
+				height: 100%;
+				width: 100%;
+				border-radius: 5px;
+			}
+		}
+	}
+
+	.resume {
+		background-color: #F8EE9F;
 	}
 }
 
@@ -378,7 +417,9 @@ html, body {
 
 //contact variables
 $available-color: #EDDA08;
-$contact-color: #696D7D;
+$contact-color: #6984A4;
+$contact-footer: #284A6F;
+//#696D7D
 
 //animation for external links
 @keyframes spin {
@@ -391,7 +432,7 @@ $contact-color: #696D7D;
 }
 //contact section
 .contact {
-	background-color: #696D7D;
+	background-color: $contact-color;
 	height: 100vh;
 	position: relative;
 	min-height: 892px;
@@ -463,7 +504,7 @@ $contact-color: #696D7D;
 }
 
 .contact-footer {
-	background-color: #41434D;
+	background-color: $contact-footer;
 	width: 100%;
 	height: auto;
 	min-height: 72px;
@@ -498,7 +539,7 @@ $contact-color: #696D7D;
 		.links-container {
 			height: 80%;
 			width: auto;
-			color: #000000;
+			color: #B7D5FF;
 
 			svg {
 				font-size: 3em;

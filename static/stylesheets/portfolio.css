@@ -209,7 +209,7 @@ html, body {
   padding-top: 15px;
   padding-bottom: 15px;
   height: 100vh;
-  min-height: 987px;
+  min-height: 1100px;
   position: relative;
   overflow: hidden; }
   .projects .proj-title {
@@ -237,6 +237,29 @@ html, body {
       margin: 1rem 0; }
     .projects .proj-carousel .view-code {
       text-align: center; }
+
+.about-me .me {
+  background-color: #64A492; }
+  .about-me .me .portrait-container {
+    width: 60%;
+    height: 60%;
+    margin: 1em auto; }
+    .about-me .me .portrait-container img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%; }
+.about-me .hobbies {
+  background-color: #8872A7; }
+  .about-me .hobbies .hobby-img {
+    width: 80%;
+    height: 80%;
+    margin: 1em auto; }
+    .about-me .hobbies .hobby-img img {
+      height: 100%;
+      width: 100%;
+      border-radius: 5px; }
+.about-me .resume {
+  background-color: #F8EE9F; }
 
 /* Add Animation */
 @-webkit-keyframes slideIn {
@@ -333,7 +356,7 @@ html, body {
     transform: rotate(360deg); } }
 
 .contact {
-  background-color: #696D7D;
+  background-color: #6984a4;
   height: 100vh;
   position: relative;
   min-height: 892px; }
@@ -365,7 +388,7 @@ html, body {
         position: absolute;
         left: 7px;
         top: 2px;
-        color: #696d7d; }
+        color: #6984a4; }
       .contact .email-form .label-name .email-input, .contact .email-form .label-name .name-input, .contact .email-form .label-email .email-input, .contact .email-form .label-email .name-input {
         text-indent: 30px;
         width: 100%; }
@@ -379,7 +402,7 @@ html, body {
       margin: 1em; }
 
 .contact-footer {
-  background-color: #41434D;
+  background-color: #284a6f;
   width: 100%;
   height: auto;
   min-height: 72px;
@@ -398,7 +421,7 @@ html, body {
     align-items: center;
     justify-content: center; }
     .contact-footer .up .fa-circle {
-      color: #696d7d; }
+      color: #6984a4; }
   .contact-footer .external-links {
     width: 100%;
     display: flex;
@@ -408,7 +431,7 @@ html, body {
     .contact-footer .external-links .links-container {
       height: 80%;
       width: auto;
-      color: #000000; }
+      color: #B7D5FF; }
       .contact-footer .external-links .links-container svg {
         font-size: 3em; }
     .contact-footer .external-links .links-container:hover {
