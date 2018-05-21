@@ -198,23 +198,27 @@ html, body {
   z-index: 1; }
 
 .sticky + .projects {
-  padding-top: 120px; }
+  padding-top: 60px; }
 
 .navbar {
-  background-color: #FFD59D;
+  background-color: #4d678a;
   width: 100%; }
+  .navbar .navbar-brand {
+    color: #D6DDE7; }
+  .navbar .navbar-toggler {
+    border: 1px solid #D6DDE7; }
 
 .projects {
-  background-color: #FFF7EC;
+  background-color: #DAE0E8;
   padding-top: 15px;
   padding-bottom: 15px;
-  height: 100vh;
-  min-height: 1100px;
   position: relative;
   overflow: hidden; }
   .projects .proj-title {
     text-align: center;
-    margin-bottom: 2em; }
+    margin: 1.5em;
+    letter-spacing: 3px;
+    text-transform: uppercase; }
   .projects .proj-carousel {
     padding: 0; }
     .projects .proj-carousel .prev-proj, .projects .proj-carousel .next-proj {
@@ -238,28 +242,37 @@ html, body {
     .projects .proj-carousel .view-code {
       text-align: center; }
 
-.about-me .me {
-  background-color: #64A492; }
-  .about-me .me .portrait-container {
-    width: 60%;
-    height: 60%;
-    margin: 1em auto; }
-    .about-me .me .portrait-container img {
-      height: 100%;
-      width: 100%;
-      border-radius: 50%; }
-.about-me .hobbies {
-  background-color: #8872A7; }
-  .about-me .hobbies .hobby-img {
-    width: 80%;
-    height: 80%;
-    margin: 1em auto; }
-    .about-me .hobbies .hobby-img img {
-      height: 100%;
-      width: 100%;
-      border-radius: 5px; }
-.about-me .resume {
-  background-color: #F8EE9F; }
+.about-me {
+  background: #64A492; }
+  .about-me h1 {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 1em; }
+  .about-me .about-content {
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 790px; }
+    .about-me .about-content .upper {
+      margin: 2em 0; }
+      .about-me .about-content .upper .portrait-img {
+        width: 170px;
+        height: 170px;
+        margin: 1em auto; }
+        .about-me .about-content .upper .portrait-img img {
+          height: 100%;
+          width: 100%;
+          border-radius: 50%; }
+    .about-me .about-content .lower .hobby-img {
+      width: 170px;
+      height: 170px;
+      margin: 1em auto; }
+      .about-me .about-content .lower .hobby-img img {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px; }
+
+.resume {
+  background-color: #4d678a; }
 
 /* Add Animation */
 @-webkit-keyframes slideIn {
@@ -295,10 +308,7 @@ html, body {
     opacity: 1; } }
 
 .view-skills {
-  background-color: #FFD59D;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  background-color: #4d678a;
   width: 100%; }
   .view-skills .skills-modal {
     display: none;
@@ -357,15 +367,18 @@ html, body {
 
 .contact {
   background-color: #6984a4;
-  height: 100vh;
-  position: relative;
-  min-height: 892px; }
+  position: relative; }
+  .contact .contact-contents {
+    background: #47628B;
+    padding: 2em;
+    margin: 3em;
+    border-radius: 5px; }
   .contact .contact-intro {
     color: #f2f2f2; }
     .contact .contact-intro h1 {
       font-weight: 400;
       letter-spacing: 2px;
-      margin-top: 2em !important; }
+      margin-top: .5em !important; }
     .contact .contact-intro .available {
       box-shadow: 0 0 3px 1px #41444F, 0 0 3px 1px #41444F, 0 0 3px 1px #41444F;
       border: 2px solid #edda08;
@@ -404,14 +417,10 @@ html, body {
 .contact-footer {
   background-color: #284a6f;
   width: 100%;
-  height: auto;
-  min-height: 72px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 0;
-  left: 0; }
+  padding: .8em; }
   .contact-footer .up {
     font-size: 2em;
     position: absolute;
@@ -456,7 +465,28 @@ html, body {
       display: inline;
       margin: 0 .2em; }
   .intro hr {
-    margin-top: 3em; } }
+    margin-top: 3em; }
+
+  .about-me .about-content .upper {
+    display: flex; }
+    .about-me .about-content .upper .portrait-img {
+      margin: 1em;
+      width: 30%;
+      max-height: 170px;
+      max-width: 184px; }
+    .about-me .about-content .upper div {
+      width: 70%;
+      margin: 1em; }
+  .about-me .about-content .lower {
+    display: flex;
+    flex-direction: row-reverse; }
+    .about-me .about-content .lower div {
+      width: 70%;
+      margin: 1em; }
+    .about-me .about-content .lower .hobby-img {
+      width: 30%;
+      max-width: 172px;
+      margin: 1em; } }
 @media (min-width: 1024px) {
   .projects {
     align-items: center; }

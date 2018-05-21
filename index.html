@@ -36,7 +36,7 @@
 		</div>
 	</header>
 	<!--NAVBAR-->
-	<nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+	<nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
 	  <a class="navbar-brand" href="#">Phillip Choi</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
@@ -59,7 +59,7 @@
 	  </div>
 	</nav>
 	<!-- PROJECTS -->
-	<section class="projects container-fluid d-flex flex-column justify-content-center" id="projects">		
+	<section class="projects container-fluid d-flex flex-column justify-content-start" id="projects">		
 		<h1 class="proj-title">Projects</h1>
 		<ul class="proj-carousel">
 			<li class="each-proj">
@@ -158,9 +158,15 @@
 				</div>
 			</li>
 		</ul>
-		<!-- VIEW ALL SKILLS -->
-		<footer class="view-skills d-flex justify-content-center align-items-center">
+		<div class="options view-skills">
+
 			<button class="show-skills btn btn-info my-3">View All Skills</button>
+			<!-- DOWNLOAD RESUME -->
+			<button class="download-resume btn btn-info my-3">
+			<i class="fas fa-file-alt"></i>
+				Download Resume
+			</button>
+			<!-- SKILLS MODAL -->
 			<div class="skills-modal">
 				<div class="modal-content d-flex align-items-center flex-column">
 					<button class="btn btn-danger close-modal">
@@ -199,34 +205,31 @@
 					</div>
 				</div>
 			</div>
-		</footer>
+		</div>
+
 	</section>
 	<!-- ABOUT ME -->
-	<section class="about-me">
-		<div class="me container-fluid d-flex flex-column py-2">
-			<h1 class="text-center mt-4">About Me</h1>
-			<div class="portrait-container">				
-				<img src="https://picsum.photos/300/300/?random" alt="self-portrait photo">
+	<section class="about-me container-fluid d-flex align-items-center justify-content-center">
+		<div class="about-content p-4 mx-4 my-5">
+			<h1 class="text-center">About Me</h1>
+			<div class="upper">
+				<div class="portrait-img">				
+					<img src="https://picsum.photos/300/300/?random" alt="self-portrait photo">
+				</div>
+				<div>
+					<p>Hi, I'm Phil! I'm a developer based in <strong>Tustin, California</strong>.</p>
+					<p>I've always been into building computers and playing videogames since I was young, so I decided to step over the fence to see what the other side was like. Surprisingly, I found it much more addicting, challenging, and rewarding. I'm determined to become a full-stack web developer, passionate about learning new skills, honing/mastering the ones I already have, and look forward to working with you in the future!</p>
+				</div>
 			</div>
-			<div class="p-2">
-				<p>Hi, I'm Phil! I'm a developer based in <strong>Tustin, California</strong>.</p>
-				<p>I've always been into building computers and playing videogames since I was young, so I decided to step over the fence to see what the other side was like. Surprisingly, I found it much more addicting, challenging, and rewarding. I'm determined to become a full-stack web developer, passionate about learning new skills, honing/mastering the ones I already have, and look forward to working with you in the future!</p>
+			<div class="lower">
+				<div class="hobby-img">
+					<img src="https://picsum.photos/300/300/?random" alt="self-portrait photo">
+				</div>
+				<div class="p-2">
+					<p>When I'm not sitting in front of a computer or working on my projects, you'll probably find me outdoors working on my photography/videography, at the gym, or reading/learning the newest web development trends necessary to stay on top of my game.</p>
+				</div>
 			</div>
 		</div>
-		<div class="hobbies container-fluid py-2">
-			<div class="hobby-img">
-				<img src="https://picsum.photos/300/300/?random" alt="self-portrait photo">
-			</div>
-			<div class="p-2">
-				<p>When I'm not sitting in front of a computer or working on my projects, you'll probably find me outdoors working on my photography/videography, at the gym, or reading/learning the newest web development trends necessary to stay on top of my game.</p>
-			</div>
-		</div>
-		<footer class="resume text-center d-flex align-items-center justify-content-center">
-			<button class="download-resume btn btn-info my-3">
-				<i class="fas fa-file-alt"></i>
-				Download Resume
-			</button>
-		</footer>
 	</section>
 	<!-- CONTACT ME -->
 	<section class="contact container-fluid d-flex justify-content-center align-items-start" id="contact">
@@ -252,33 +255,33 @@
 				</label>
 				<button class="submit-email btn btn-success">Submit</button>
 			</form>
-			<!-- CONTACT FOOTER -->
-			<footer class="contact-footer">
-				<div class="up">
-					<a href="#">
-						<span class="fa-layers fa-fw">
-							<i class="fas fa-circle"></i>
-							<i class="fas fa-chevron-circle-up fa-inverse"></i>
-						</span>
-					</a>
-				</div>
-				<div class="external-links">
-					<a target="_blank" href="https://www.linkedin.com/in/webdevphil" class="links-container linked-in">
-						<i class="fab fa-linkedin"></i>
-					</a>
-					<a target="_blank" href="https://github.com/webdevpchoi" class="links-container github">
-						<i class="fab fa-github-square"></i>
-					</a>
-					<a target="_blank" href="https://codepen.io/webdevphil/" class="links-container codepen">
-						<i class="fab fa-codepen"></i>
-					</a>
-					<a href="www.google.com" class="links-container instagram">
-						<i class="fab fa-instagram"></i>
-					</a>		
-				</div>
-			</footer>			
 		</div>
 	</section>
+	<!-- CONTACT FOOTER -->
+	<footer class="contact-footer">
+		<div class="up">
+			<a href="#">
+				<span class="fa-layers fa-fw">
+					<i class="fas fa-circle"></i>
+					<i class="fas fa-chevron-circle-up fa-inverse"></i>
+				</span>
+			</a>
+		</div>
+		<div class="external-links">
+			<a target="_blank" href="https://www.linkedin.com/in/webdevphil" class="links-container linked-in">
+				<i class="fab fa-linkedin"></i>
+			</a>
+			<a target="_blank" href="https://github.com/webdevpchoi" class="links-container github">
+				<i class="fab fa-github-square"></i>
+			</a>
+			<a target="_blank" href="https://codepen.io/webdevphil/" class="links-container codepen">
+				<i class="fab fa-codepen"></i>
+			</a>
+			<a href="www.google.com" class="links-container instagram">
+				<i class="fab fa-instagram"></i>
+			</a>		
+		</div>
+	</footer>			
 	
 	<script src="./static/dependencies/jquery-3.3.1.js"></script>
 	<script src="./static/dependencies/slick/slick.min.js"></script>

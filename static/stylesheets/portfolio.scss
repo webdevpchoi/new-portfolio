@@ -62,6 +62,8 @@
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+$navbar-color: #4D678A;
+
 * {
     -webkit-overflow-scrolling: touch;
 }
@@ -230,28 +232,36 @@ html, body {
 
 //prevents sudden movement when navbar changes positions
 .sticky + .projects {
-	padding-top: 120px;
+	padding-top: 60px;
 }
 
 //navbar
 .navbar {
-	background-color: #FFD59D;
+	background-color: $navbar-color;
 	width: 100%;
+
+	.navbar-brand {
+		color: #D6DDE7;
+	}
+
+	.navbar-toggler {
+		border: 1px solid #D6DDE7;
+	}
 }
 
 //project section
 .projects {
-	background-color: #FFF7EC;
+	background-color: #DAE0E8;
 	padding-top: 15px;
 	padding-bottom: 15px;
-	height: 100vh;
-	min-height: 1100px;
 	position: relative;
 	overflow: hidden;
 
 	.proj-title {
 		text-align: center;
-		margin-bottom: 2em;
+		margin: 1.5em;
+		letter-spacing: 3px;
+		text-transform: uppercase;
 	}
 
 	.proj-carousel {
@@ -295,41 +305,53 @@ html, body {
 
 //about me section 
 .about-me {
-	.me {
-		background-color: #64A492;
+	background: #64A492;
 
-		.portrait-container {
-			width: 60%;
-			height: 60%;
-			margin: 1em auto;
+	h1 {
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		margin: 1em;
+	}
 
-			img {
-				height: 100%;
-				width: 100%;
-				border-radius: 50%;
+	.about-content {
+		background-color: #fff;
+		border-radius: 5px;
+		max-width: 790px;
+
+		.upper {
+			margin: 2em 0;
+			.portrait-img {
+				width: 170px;
+				height: 170px;
+				margin: 1em auto;
+
+				img {
+					height: 100%;
+					width: 100%;
+					border-radius: 50%;
+				}
+			}
+		}
+
+		.lower {
+			.hobby-img {
+				width: 170px;
+				height: 170px;
+				margin: 1em auto;
+
+				img {
+					height: 100%;
+					width: 100%;
+					border-radius: 5px;
+				}
 			}
 		}
 	}
 
-	.hobbies {
-		background-color: #8872A7;
+}
 
-		.hobby-img {
-			width: 80%;
-			height: 80%;
-			margin: 1em auto;
-
-			img {
-				height: 100%;
-				width: 100%;
-				border-radius: 5px;
-			}
-		}
-	}
-
-	.resume {
-		background-color: #F8EE9F;
-	}
+.resume {
+	background-color: $navbar-color;
 }
 
 //Animations for modal
@@ -356,10 +378,7 @@ html, body {
 
 //view all skills section
 .view-skills {
-	background-color: #FFD59D;
-	position: absolute;
-	bottom: 0;
-	left: 0;
+	background-color: $navbar-color;
 	width: 100%;
 
 	.skills-modal {
@@ -433,9 +452,14 @@ $contact-footer: #284A6F;
 //contact section
 .contact {
 	background-color: $contact-color;
-	height: 100vh;
 	position: relative;
-	min-height: 892px;
+
+	.contact-contents {
+		background: #47628B;
+		padding: 2em;
+		margin: 3em;
+		border-radius: 5px;
+	}
 
 	.contact-intro {
 		color: #f2f2f2;
@@ -443,7 +467,7 @@ $contact-footer: #284A6F;
 		h1 {
 			font-weight: 400;
 			letter-spacing: 2px;
-			margin-top: 2em !important;
+			margin-top: .5em !important;
 		}
 
 		.available {
@@ -506,14 +530,10 @@ $contact-footer: #284A6F;
 .contact-footer {
 	background-color: $contact-footer;
 	width: 100%;
-	height: auto;
-	min-height: 72px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: absolute;
-	bottom: 0;
-	left: 0;
+	padding: .8em;
 		
 	.up {
 		font-size: 2em;
@@ -587,6 +607,42 @@ $contact-footer: #284A6F;
 
 		hr {
 			margin-top: 3em;
+		}
+	}
+
+	.about-me {
+		.about-content {
+			.upper {
+				display: flex;
+
+				.portrait-img {
+					margin: 1em;
+					width: 30%;
+					max-height: 170px;
+					max-width: 184px;
+				}
+
+				div {
+					width: 70%;
+					margin: 1em;
+				}
+			}
+
+			.lower {
+				display: flex;
+				flex-direction: row-reverse;
+
+				div {
+					width: 70%;
+					margin: 1em;
+				}
+
+				.hobby-img {
+					width: 30%;
+					max-width: 172px;
+					margin: 1em;
+				}
+			}
 		}
 	}
 }
